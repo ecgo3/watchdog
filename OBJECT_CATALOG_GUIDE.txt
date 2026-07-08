@@ -1,0 +1,246 @@
+This file explains the groups shown in WATCHDOG's OBJECT CATALOG pane.
+The pane is an index of public space-object records, not a list of objects
+owned or operated by WATCHDOG.
+
+The satellite catalog and group memberships come from CelesTrak. WATCHDOG
+matches those public group records to the active CelesTrak SATCAT catalog and
+displays the resulting count beside each category.
+
+An object can belong to several categories at once. For example, a CubeSat can
+also be an amateur-radio satellite, an Earth-observation satellite, and a
+science mission. Category totals therefore must not be added together to find
+the total number of unique satellites.
+
+The groups describe what an object is or what it generally does. They do not
+replace the individual object's data card.
+
+AMATEUR RADIO
+
+Satellites that carry equipment associated with the amateur-radio service.
+They may transmit beacons or telemetry, relay voice or digital messages, or
+provide experimental radio links for licensed amateur operators, universities,
+and educational groups.
+source group: CelesTrak "amateur"
+
+
+BEIDOU
+
+BeiDou is China's global navigation satellite system. Its satellites broadcast
+timing and navigation signals that compatible receivers use to calculate
+position, velocity, and time. It serves a role comparable to GPS, Galileo, and
+GLONASS.
+
+source group: CelesTrak "beidou"
+
+
+COMMUNICATIONS
+
+Satellites whose main public function is relaying information. This broad group
+can include television and radio broadcasting, telephone links, internet
+service, data relay, mobile communications, and government communications.
+
+Dedicated constellations such as Starlink, OneWeb, and Kuiper are displayed as
+their own groups even though their mission is also communications. A satellite
+can consequently appear in both a constellation-specific group and a general
+communications group.
+
+ource group: CelesTrak "other-comm"
+
+
+CUBESATS
+
+CubeSat describes a standardized spacecraft size and construction format, not
+a mission. One CubeSat unit, written 1U, is approximately a 10-centimeter cube.
+Larger spacecraft combine units into formats such as 2U, 3U, 6U, or 12U.
+
+source group: CelesTrak "cubesat"
+
+
+EARTH OBS
+
+Earth-observation satellites look toward Earth and collect remote-sensing data.
+Payloads can include optical cameras, infrared instruments, radar, microwave
+sensors, altimeters, and atmospheric instruments. Their measurements support
+mapping, environmental research, agriculture, disaster response, climate
+science, oceanography, and resource monitoring.
+
+
+ source group: CelesTrak "resource"
+
+
+GALILEO
+
+Galileo is the European Union's global navigation satellite system. It provides
+positioning, navigation, and precise timing services through a constellation
+primarily operating in medium Earth orbit. It is a separate system from the
+United States' GPS, Russia's GLONASS, and China's BeiDou.
+
+source group: CelesTrak "galileo"
+
+
+GLONASS
+
+GLONASS is Russia's global navigation satellite system. Its satellites provide
+positioning, navigation, and timing signals, primarily from medium Earth orbit.
+Receivers may combine GLONASS with other navigation constellations to improve
+coverage and measurement geometry.
+
+source group: CelesTrak "glo-ops"
+
+
+GPS
+
+GPS is the United States' Global Positioning System. GPS satellites broadcast
+precise time and orbital information from medium Earth orbit. A receiver uses
+signals from multiple satellites to determine position, velocity, and time.
+
+source group: CelesTrak "gps-ops"
+
+
+KUIPER
+
+Project Kuiper is Amazon's low-Earth-orbit broadband satellite constellation.
+It is intended to provide internet connectivity through a large network of
+satellites and user ground terminals.
+
+ source group: CelesTrak "kuiper"
+
+
+MILITARY PUBLIC
+
+Military or defense-associated spacecraft that are present in public orbital
+catalogs. Public records can provide a catalog identity and general orbital
+elements, but detailed payload capabilities, telemetry, operators, maneuvers,
+and mission objectives may be limited, generalized, delayed, or unavailable.
+
+source group: CelesTrak "military"
+
+
+ONEWEB
+
+OneWeb is a low-Earth-orbit broadband communications constellation operated by
+Eutelsat OneWeb. The satellites work as a network to connect user regions and
+gateway stations. They occupy multiple orbital planes rather than functioning
+as a single spacecraft.
+
+source group: CelesTrak "oneweb"
+
+
+SCIENCE
+
+Spacecraft publicly grouped around scientific investigation. Missions can study
+astronomy, solar physics, Earth's magnetosphere, space weather, geodesy,
+fundamental physics, planetary environments, or the space environment itself.
+
+This is a broad catalog group, not a complete list of all scientific missions.
+Some science spacecraft are instead or additionally classified as CubeSats,
+Earth-observation satellites, weather satellites, or deep-space spacecraft.
+
+source group: CelesTrak "science"
+
+STARLINK
+
+Starlink is SpaceX's large low-Earth-orbit communications constellation for
+broadband internet service. Thousands of individual satellites operate across
+multiple orbital shells and planes. Each public catalog object has its own
+NORAD ID and orbital element set even though it belongs to the wider network.
+
+source group: CelesTrak "starlink"
+
+
+WEATHER
+
+Satellites used for meteorology and environmental monitoring. Their instruments
+observe clouds, storms, atmospheric temperature and moisture, winds, radiation,
+and other conditions. Some remain over one longitude in geostationary orbit;
+others repeatedly scan the planet from lower polar or near-polar orbits.
+
+source group: CelesTrak "weather"
+
+
+OBJECT TAGS
+
+[SAT]  Artificial Earth satellite.
+[ISS]  Crewed station or human-spaceflight object classification.
+[AST]  Asteroid or near-Earth object.
+[COM]  Comet.
+[PLN]  Planet or major Solar System body.
+[SCI]  Scientific or deep-space spacecraft.
+[---]  Object type was not identified by the source response.
+
+An unknown tag does not mean the object is imaginary or invalid. It means the
+available lookup result did not provide a type WATCHDOG could identify without
+guessing.
+
+
+COMMON DATA TERMS
+
+
+NORAD ID
+    The public catalog number assigned to a tracked Earth-orbiting object. It
+    identifies a catalog object; it is not a radio frequency or mission number.
+
+GP / TLE
+    Public General Perturbations orbital elements. TLE means Two-Line Element
+    set. WATCHDOG obtains current GP data from CelesTrak and propagates it with
+    SGP4 to calculate a predicted state.
+
+SGP4
+    The standard mathematical propagation model used with public GP/TLE data.
+    Its output is a prediction based on the element epoch, not live spacecraft
+    telemetry.
+
+ALTITUDE
+    Approximate height above the reference Earth surface at the prediction time.
+
+INCLINATION
+    The angle between an orbit's plane and Earth's equatorial plane.
+
+PERIGEE / APOGEE
+    The lowest and highest portions of an Earth orbit, respectively.
+
+OPERATOR
+    Organization responsible for controlling a spacecraft. If the selected
+    authoritative source does not publish it, WATCHDOG displays NOT PUBLIC or
+    UNAVAILABLE rather than inferring it from the spacecraft name.
+
+STATUS
+    The operational code or state published by the source. Public status can lag
+    real operations and should be read together with its source label.
+
+PREDICTED POSITION
+    A position calculated for a specific time from an authoritative public
+    ephemeris or from public orbital elements and the labeled propagation model.
+    It is not necessarily a live measurement.
+
+
+HOW TO USE THE CATALOG
+
+1. Press Tab until OBJECT CATALOG is active.
+2. Move with j/k or the arrow keys.
+3. Press Enter to load objects from the selected category.
+4. Select an object in the OBJECTS pane and press Enter to inspect it.
+5. Press Ctrl+V to open authoritative trajectory geometry in the external
+   visualizer when geometry is available.
+
+Equivalent commands include:
+
+    satellite starlink
+    satellite gps
+    list cubesats
+    list science
+    search ISS
+    inspect 25544
+
+
+IMPORTANT LIMITS
+
+- Public category membership is maintained by the external catalog producer
+  and may change as objects are launched, reclassified, or decay.
+- Category membership is not proof of a spacecraft's complete mission or
+  current operational state.
+- Public GP/TLE data is suitable for visualization and general prediction, not
+  flight safety, conjunction assessment, targeting, or spacecraft control.
+- Classified, withheld, or unpublished objects and telemetry are not available.
+- WATCHDOG labels absent information instead of filling gaps with assumptions.
+
